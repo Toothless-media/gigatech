@@ -79,113 +79,21 @@
 
                 The current setup uses JavaScript to show a success state on submit.
               -->
-              <form
-                id="contact-form"
-                novalidate
-                aria-label="Contact form"
-              >
-
-                <div class="form-grid-2">
-                  <div class="form-group">
-                    <label class="form-label" for="name">
-                      Full Name <span class="required" aria-hidden="true">*</span>
-                    </label>
-                    <input
-                      class="form-input"
-                      type="text"
-                      id="name"
-                      name="name"
-                      autocomplete="name"
-                      placeholder="Jane Smith"
-                      required
-                      aria-required="true"
-                    />
-                  </div>
-
-                  <div class="form-group">
-                    <label class="form-label" for="title">
-                      Title / Role
-                    </label>
-                    <input
-                      class="form-input"
-                      type="text"
-                      id="title"
-                      name="title"
-                      autocomplete="organization-title"
-                      placeholder="IT Director"
-                    />
-                  </div>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="organization">
-                    Organization <span class="required" aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    class="form-input"
-                    type="text"
-                    id="organization"
-                    name="organization"
-                    autocomplete="organization"
-                    placeholder="Department of ..."
-                    required
-                    aria-required="true"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="email">
-                    Work Email <span class="required" aria-hidden="true">*</span>
-                  </label>
-                  <input
-                    class="form-input"
-                    type="email"
-                    id="email"
-                    name="email"
-                    autocomplete="email"
-                    placeholder="jsmith@yourorg.gov"
-                    required
-                    aria-required="true"
-                  />
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="service">
-                    Area of Interest
-                  </label>
-                  <select class="form-select" id="service" name="service">
-                    <option value="">— Select an option —</option>
-                    <option value="assessment">Endpoint Architecture &amp; Readiness Assessment</option>
-                    <option value="mdm">Endpoint &amp; MDM Architecture Consulting</option>
-                    <option value="modernization">Endpoint Modernization Project</option>
-                    <option value="fractional">Fractional Endpoint Architect</option>
-                    <option value="general">General Inquiry / Not Sure Yet</option>
-                  </select>
-                </div>
-
-                <div class="form-group">
-                  <label class="form-label" for="message">
-                    How Can We Help? <span class="required" aria-hidden="true">*</span>
-                  </label>
-                  <textarea
-                    class="form-textarea"
-                    id="message"
-                    name="message"
-                    placeholder="Briefly describe your situation or what you're trying to accomplish. The more context you share, the more useful our initial response will be."
-                    required
-                    aria-required="true"
-                  ></textarea>
-                </div>
-
-                <button type="submit" class="form-submit">
-                  Send Message
-                </button>
-
-                <p class="form-note">
-                  Fields marked <span style="color:#dc2626;">*</span> are required.
-                </p>
-
-              </form>
+             <form
+              action="https://formspree.io/f/mdajwwnb"
+              method="POST"
+            >
+              <label>
+                Your email:
+                <input type="email" name="email">
+              </label>
+              <label>
+                Your message:
+                <textarea name="message"></textarea>
+              </label>
+              <!-- your other form fields go here -->
+              <button type="submit">Send</button>
+            </form>
             </div><!-- /form-container -->
 
             <!-- Success state (shown after submit) -->
