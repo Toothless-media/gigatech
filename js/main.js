@@ -54,42 +54,7 @@
   });
 
 
-  /* ------------------------------------------
-     Contact Form — Static site demo handler
-     Replace the form action with your endpoint
-     (e.g., Formspree, Netlify Forms, etc.)
-     to process real submissions.
-  ------------------------------------------ */
-  const contactForm    = document.getElementById('contact-form');
-  const formContainer  = document.getElementById('form-container');
-  const formSuccess    = document.getElementById('form-success');
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      // Basic client-side validation
-      const requiredFields = contactForm.querySelectorAll('[required]');
-      let valid = true;
-
-      requiredFields.forEach(function (field) {
-        // Reset prior state
-        field.style.borderColor = '';
-
-        if (!field.value.trim()) {
-          field.style.borderColor = '#dc2626';
-          valid = false;
-        }
-
-        // Simple email format check
-        if (field.type === 'email' && field.value.trim()) {
-          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (!emailPattern.test(field.value.trim())) {
-            field.style.borderColor = '#dc2626';
-            valid = false;
-          }
-        }
-      });
+  
 
       if (!valid) return;
 
