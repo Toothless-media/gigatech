@@ -93,19 +93,21 @@
 
       if (!valid) return;
 
-      // -----------------------------------------------
-      // To process real form submissions, replace this
-      // block with a fetch() call to your form endpoint.
-      //
-      // Example (Formspree):
-      //   const formData = new FormData(contactForm);
-      //   fetch('https://formspree.io/f/YOUR_FORM_ID', {
-      //     method: 'POST',
-      //     body: formData,
-      //     headers: { 'Accept': 'application/json' }
-      //   }).then(() => showSuccess());
-      // -----------------------------------------------
-
+      form
+  action="https://formspree.io/f/mdajwwnb"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
       showSuccess();
     });
 
